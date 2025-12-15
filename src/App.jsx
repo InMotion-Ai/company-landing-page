@@ -1,12 +1,10 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
-import CompanyLogos from './components/CompanyLogos';
-import Services from './components/Services';
-import CaseStudies from './components/CaseStudies';
+import Benefits from './components/Benefits';
 import WorkingProcess from './components/WorkingProcess';
-import Team from './components/Team';
-import Testimonials from './components/Testimonials';
+import FeaturesIncluded from './components/FeaturesIncluded';
+import FAQ from './components/FAQ';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 
@@ -15,12 +13,10 @@ const App = () => {
     <main>
       <Navbar />
       <Header />
-      <CompanyLogos />
-      <Services />
-      <CaseStudies />
+      <Benefits />
       <WorkingProcess />
-      <Team />
-      <Testimonials />
+      <FeaturesIncluded />
+      <FAQ />
       <ContactUs />
       <Footer />
     </main>

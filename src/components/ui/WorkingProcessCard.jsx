@@ -7,8 +7,8 @@ const WorkingProcessCard = ({ id, title, text }) => {
 
   return (
     <div
-      className={`rounded-3xl p-8 shadow-[0_4px_0_0_#000] border border-black my-5 transition-all duration-600 ${
-        isOpen ? 'bg-[#B9FF66]' : 'bg-[#F3F3F3]'
+      className={`rounded-3xl p-8 shadow-[0_4px_0_0_var(--color-dark)] border border-[var(--color-dark)] my-5 transition-all duration-600 ${
+        isOpen ? 'bg-[var(--color-accent)]' : 'bg-[var(--color-gray-light)]'
       }`}
     >
       {/* Header Row */}
@@ -18,7 +18,7 @@ const WorkingProcessCard = ({ id, title, text }) => {
           <h3 className="text-lg font-medium">{title}</h3>
         </div>
         <button
-          className="text-2xl rounded-full bg-[#F3F3F3] p-2 border border-black cursor-pointer"
+          className="text-2xl rounded-full bg-[var(--color-gray-light)] p-2 border border-[var(--color-dark)] cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <FaMinus /> : <FaPlus />}
@@ -28,7 +28,7 @@ const WorkingProcessCard = ({ id, title, text }) => {
       {/* Divider + Text */}
       {isOpen && (
         <div className="mt-4 transition-all duration-600">
-          <hr className="border-black my-4" />
+          <hr className="border-[var(--color-dark)] my-4" />
           <p className="text-sm leading-relaxed text-black">{text}</p>
         </div>
       )}

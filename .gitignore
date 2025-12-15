@@ -26,3 +26,6 @@ dist-ssr
 # claude
 .claude
 .mcp.json
+
+# Playwright
+*.playwright-mcp
