@@ -1,8 +1,9 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from './ui/Button';
 import Modal from './ui/Modal';
 import EarlyAccessForm from './forms/EarlyAccessForm';
 import { navbarLinks } from '../data';
-import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { HiX } from 'react-icons/hi';
 
@@ -27,10 +28,10 @@ const Navbar = () => {
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center gap-5 w-full">
           {/* Logo - Text-based placeholder */}
           <div className="logo">
-            <a href="/" className="text-2xl font-bold">
+            <Link to="/" className="text-2xl font-bold">
               <span className="text-white">NextOps</span>
               <span className="bg-[var(--color-accent)] px-1 rounded text-[var(--color-dark)]">AI</span>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { navbarLinks } from '../data';
 import { FaLinkedinIn } from 'react-icons/fa6';
 import { FaTwitter } from 'react-icons/fa';
@@ -11,10 +12,10 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row gap-8 justify-between items-center mb-8">
           {/* Logo */}
           <div className="logo text-2xl font-bold">
-            <a href="/">
+            <Link to="/">
               <span className="text-white">NextOps</span>
               <span className="bg-[var(--color-accent)] px-1 rounded text-[var(--color-dark)]">AI</span>
-            </a>
+            </Link>
           </div>
 
           {/* Navigation Links */}
@@ -57,9 +58,9 @@ const Footer = () => {
         {/* Bottom Row - Copyright & Privacy */}
         <div className="flex flex-col lg:flex-row gap-3 lg:gap-8 text-center justify-center text-sm">
           <p>© {new Date().getFullYear()} NextOpsAI. All Rights Reserved.</p>
-          <a href="#" className="hover:text-[var(--color-accent)] transition-colors">
+          <Link to="/privacy-policy" className="hover:text-[var(--color-accent)] transition-colors">
             Privacy Policy
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
