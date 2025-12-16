@@ -1,130 +1,197 @@
-import member1 from './assets/member1.png';
-import member2 from './assets/member2.png';
-import member3 from './assets/member3.png';
-import member4 from './assets/member4.png';
-import member5 from './assets/member5.png';
-import member6 from './assets/member6.png';
+// Image imports
+import heroImage from './assets/month-end/hero-image.jpg';
+import howItWorksImage from './assets/month-end/how-it-works.png';
+import copilotEntities from './assets/month-end/copilot-entities.png';
 
+// Navigation links
 export const navbarLinks = [
-  { id: 1, text: 'About us', href: '#about-us' },
-  { id: 2, text: 'Services', href: '#services' },
-  { id: 3, text: 'Use Cases', href: '#use-cases' },
-  { id: 4, text: 'Pricing', href: '#pricing' },
-  { id: 5, text: 'Blog', href: '#blog' },
+  { id: 1, text: 'How it Works', href: '#how-it-works' },
+  { id: 2, text: 'Features', href: '#features' },
 ];
 
-export const workingProccess = [
-  {
-    id: '01',
-    title: 'Consultation',
-    text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-  },
-  {
-    id: '02',
-    title: 'Research and Strategy Development',
-    text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-  },
-  {
-    id: '03',
-    title: 'Implementation',
-    text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-  },
-  {
-    id: '04',
-    title: 'Monitoring and Optimization',
-    text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-  },
-  {
-    id: '05',
-    title: 'Reporting and Communication',
-    text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-  },
-  {
-    id: '06',
-    title: 'Continual Improvement',
-    text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-  },
-];
-
-export const teamMembers = [
+// Benefits section
+export const benefits = [
   {
     id: 1,
-    picture: member1,
-    name: 'John Smith',
-    position: 'CEO and Founder',
-    bio: '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy',
+    title: 'Less manual busywork',
+    description:
+      "AI reduces repetitive data handling so you're not copying, pasting, and re-checking the same things.",
   },
   {
     id: 2,
-    picture: member2,
-    name: 'Jane Doe',
-    position: 'Director of Operations',
-    bio: '7+ years of experience in project management and team leadership. Strong organizational and communication skills',
+    title: 'Fewer "where is that receipt?" moments',
+    description:
+      'Missing documents and approvals get highlighted before they block the close.',
   },
   {
     id: 3,
-    picture: member3,
-    name: 'Michael Brown',
-    position: 'Senior SEO Specialist',
-    bio: '5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization',
+    title: 'Cleaner reconciliations',
+    description:
+      'AI helps match transactions to supporting records and flags mismatches for review.',
   },
   {
     id: 4,
-    picture: member4,
-    name: 'Emily Johnson',
-    position: 'PPC Manager',
-    bio: '3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis',
+    title: 'Fewer last-minute surprises',
+    description:
+      "You see exceptions as they happen, not after month-end when it's hardest to fix.",
   },
   {
     id: 5,
-    picture: member5,
-    name: 'Brian Williams',
-    position: 'Social Media Specialist',
-    bio: '4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement',
+    title: 'A clearer close status',
+    description:
+      "Always know what's complete, what's pending, and what needs attention—without asking three people.",
   },
   {
     id: 6,
-    picture: member6,
-    name: 'Sarah Kim',
-    position: 'Content Creator',
-    bio: '2+ years of experience in writing and editing Skilled in creating compelling, SEO-optimized content for various industries',
+    title: 'Stronger audit readiness',
+    description:
+      "Supporting documents stay connected to the items they explain, so your trail doesn't live in someone's inbox.",
   },
 ];
 
-export const testimonials = [
+// How it works steps
+export const howItWorksSteps = [
+  {
+    id: '01',
+    title: 'Capture',
+    description:
+      'AI collects the core month-end inputs (invoices, receipts, sales summaries, payroll reports, bank/credit activity) into one workflow.',
+  },
+  {
+    id: '02',
+    title: 'Extract & normalize',
+    description:
+      "AI pulls key details and standardizes them so you don't spend days translating formats and re-keying info.",
+  },
+  {
+    id: '03',
+    title: 'Match & reconcile',
+    description:
+      'AI matches transactions to supporting documents and highlights mismatches, duplicates, and missing items.',
+  },
+  {
+    id: '04',
+    title: 'Handle exceptions during the month',
+    description:
+      'AI keeps a running exception list so issues get resolved continuously—before month-end pressure hits.',
+  },
+  {
+    id: '05',
+    title: 'Review, finalize, and export',
+    description:
+      'AI prepares a clear close checklist and month-end-ready outputs so you can review quickly and finalize with confidence.',
+  },
+];
+
+// Features section
+export const features = [
   {
     id: 1,
-    review:
-      '"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
-    author: 'John Smith',
-    position: 'Marketing Director at XYZ Corp',
+    title: 'Invoice process automation & reconciliation',
+    description:
+      'AI captures invoices and supporting docs, helps match invoices to payments, and flags duplicates or missing items.',
+    detailsList: [
+      'AI captures invoices and supporting docs',
+      'Helps match invoices to payments and flags duplicates / missing items',
+      'Keeps vendor records organized and reviewable',
+    ],
   },
   {
     id: 2,
-    review:
-      '"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
-    author: 'John Smith',
-    position: 'Marketing Director at XYZ Corp',
+    title: 'Payroll reconciliation',
+    description:
+      'AI helps reconcile payroll totals and remittances to what actually cleared, supports month-end cutoff adjustments with clear visibility.',
+    detailsList: [
+      'AI helps reconcile payroll totals and remittances to what actually cleared',
+      'Supports month-end cutoff adjustments with clear visibility',
+      'Flags variances that need attention',
+    ],
   },
   {
     id: 3,
-    review:
-      '"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
-    author: 'John Smith',
-    position: 'Marketing Director at XYZ Corp',
+    title: 'Expense management reconciliation',
+    description:
+      'AI matches card/bank expenses to receipts, highlights missing receipts and uncategorized spend early.',
+    detailsList: [
+      'AI matches card/bank expenses to receipts',
+      'Highlights missing receipts and uncategorized spend early',
+      'Reduces spreadsheet tracking and back-and-forth',
+    ],
   },
   {
     id: 4,
-    review:
-      '"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
-    author: 'John Smith',
-    position: 'Marketing Director at XYZ Corp',
+    title: 'Custom reconciliations (your business rules)',
+    description:
+      "AI supports workflows for niche requirements and standardizes repeatable checks that currently live in someone's memory.",
+    detailsList: [
+      'AI supports workflows for niche requirements (department/location/process)',
+      "Standardizes repeatable checks that currently live in someone's memory",
+      'Keeps a clear trail of what was checked and why',
+    ],
+  },
+];
+
+// FAQ section
+export const faqs = [
+  {
+    id: 1,
+    question: 'Is this for accountants or owners?',
+    answer:
+      "It's built for owners who need month-end to be reliable and less disruptive—without becoming a finance expert. Your bookkeeper/accountant can still review the outputs.",
+  },
+  {
+    id: 2,
+    question: 'Do you replace our accounting software?',
+    answer:
+      'No. The goal is to make your month-end workflow smoother on top of what you already use.',
+  },
+  {
+    id: 3,
+    question: 'What does the AI actually do?',
+    answer:
+      'It helps collect, organize, match, and flag exceptions—so humans focus on review and decisions, not grunt work.',
+  },
+  {
+    id: 4,
+    question: 'How do exceptions work?',
+    answer:
+      "Anything that doesn't match cleanly goes into an exception list (missing docs, mismatches, duplicates) so you can resolve the small number of items that truly need attention.",
   },
   {
     id: 5,
-    review:
-      '"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
-    author: 'John Smith',
-    position: 'Marketing Director at XYZ Corp',
+    question: 'How long does onboarding take?',
+    answer:
+      'We start small in pilots: map your month-end checklist, connect the key sources, then automate the highest-friction parts first.',
+  },
+  {
+    id: 6,
+    question: 'What about privacy and access?',
+    answer:
+      "We use role-based access and keep data handling transparent. We'll share full privacy/security details during onboarding.",
   },
 ];
+
+// Form configuration
+export const formConfig = {
+  roleOptions: [
+    'Owner / Operator',
+    'Bookkeeper',
+    'Controller / Finance Manager',
+    'External Accountant / CPA',
+    'Other',
+  ],
+  improvementOptions: [
+    'Invoices / AP',
+    'Payroll',
+    'Expenses',
+    'Everything',
+    'Other',
+  ],
+};
+
+// Export images for use in components
+export const images = {
+  heroImage,
+  howItWorksImage,
+  copilotEntities,
+};

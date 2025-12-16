@@ -1,6 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import 'tailwindcss';
 
+:root {
+  /* Primary Colors */
+  --color-primary: #043873;
+  --color-primary-light: #4f9cf9;
+
+  /* Accent Colors */
+  --color-accent: #ffe492;
+  --color-accent-light: #c4defd;
+
+  /* Neutral Colors */
+  --color-dark: #212529;
+  --color-white: #ffffff;
+  --color-gray-light: #f3f3f3;
+
+  /* Legacy color mappings for gradual migration */
+  --color-bg-dark: var(--color-primary);
+  --color-bg-light: var(--color-white);
+  --color-text-dark: var(--color-dark);
+  --color-text-light: var(--color-white);
+  --color-cta: var(--color-primary-light);
+  --color-cta-secondary: var(--color-accent);
+}
+
 html {
   scroll-behavior: smooth;
 }

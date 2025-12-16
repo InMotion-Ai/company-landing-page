@@ -1,7 +1,8 @@
-const Button = ({ text, className, children }) => {
+const Button = ({ text, className, children, ...props }) => {
   return (
     <button
       className={`px-[15px] py-[10px] md:px-[22px] md:py-[15px] rounded-xl cursor-pointer whitespace-nowrap ${className}`}
+      {...props}
     >
       {children || text}
     </button>
