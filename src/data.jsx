@@ -7,8 +7,6 @@ import copilotEntities from './assets/month-end/copilot-entities.png';
 export const navbarLinks = [
   { id: 1, text: 'How it Works', href: '#how-it-works' },
   { id: 2, text: 'Features', href: '#features' },
-  { id: 3, text: 'FAQ', href: '#faq' },
-  { id: 4, text: 'Get Access', href: '#get-access' },
 ];
 
 // Benefits section

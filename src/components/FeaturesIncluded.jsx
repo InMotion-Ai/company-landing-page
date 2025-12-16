@@ -29,7 +29,7 @@ const FeaturesIncluded = () => {
     <section className="py-16" id="features">
       <div className="container mx-auto px-6">
         {/* Custom centered heading */}
-        <div className="text-center max-w-4xl mx-auto mb-12">
+        <div className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
             What the AI Copilot supports
           </h2>
@@ -38,27 +38,31 @@ const FeaturesIncluded = () => {
           </p>
         </div>
 
-        {/* Supporting Image */}
-        <div className="mt-12 flex justify-center">
-          <img
-            src={images.copilotEntities}
-            alt="AI Copilot Components"
-            className="max-w-2xl w-full rounded-2xl shadow-lg"
-          />
-        </div>
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
+          {/* Image - Left side (65% width) */}
+          <div className="w-full lg:w-[65%] lg:sticky lg:top-8">
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={images.copilotEntities}
+                alt="AI Copilot Components"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
 
-        {/* Features Grid */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {features.map((feature) => (
-            <FeatureCard
-              key={feature.id}
-              title={feature.title}
-              description={feature.description}
-              detailsList={feature.detailsList}
-              icon={featureIcons[feature.id]}
-              bgColor={featureColors[feature.id]}
-            />
-          ))}
+          {/* Feature Cards - Right side (35% width) */}
+          <div className="w-full lg:w-[35%] space-y-8">
+            {features.map((feature) => (
+              <FeatureCard
+                key={feature.id}
+                title={feature.title}
+                description={feature.description}
+                detailsList={feature.detailsList}
+                icon={featureIcons[feature.id]}
+                bgColor={featureColors[feature.id]}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
