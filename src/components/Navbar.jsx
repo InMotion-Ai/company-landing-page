@@ -1,25 +1,19 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from './ui/Button';
-import Modal from './ui/Modal';
-import EarlyAccessForm from './forms/EarlyAccessForm';
 import { navbarLinks } from '../data';
 import { FaBars } from 'react-icons/fa';
 import { HiX } from 'react-icons/hi';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCTAClick = () => {
-    setIsModalOpen(true);
+    const accessSection = document.getElementById('get-access');
+    if (accessSection) {
+      accessSection.scrollIntoView({ behavior: 'smooth' });
+    }
     setIsMenuOpen(false);
-  };
-
-  const handleFormSubmit = (formData) => {
-    console.log('Early access request:', formData);
-    alert('Thank you for your interest! We\'ll be in touch soon.');
-    setIsModalOpen(false);
   };
 
   return (
@@ -94,15 +88,6 @@ const Navbar = () => {
           )}
         </nav>
       </div>
-
-      {/* Modal with Early Access Form */}
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title="Request Early Access"
-      >
-        <EarlyAccessForm onSubmit={handleFormSubmit} />
-      </Modal>
     </>
   );
 };

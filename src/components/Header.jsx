@@ -1,17 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from './ui/Button';
-import Modal from './ui/Modal';
-import EarlyAccessForm from './forms/EarlyAccessForm';
 import { images } from '../data';
 
 const Header = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleFormSubmit = (formData) => {
-    console.log('Early access request:', formData);
-    // TODO: Integrate with backend/email service
-    alert('Thank you for your interest! We\'ll be in touch soon.');
-    setIsModalOpen(false);
+  const handleRequestAccess = () => {
+    const accessSection = document.getElementById('get-access');
+    if (accessSection) {
+      accessSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -33,7 +29,7 @@ const Header = () => {
               <Button
                 text="Request early access"
                 className="bg-[var(--color-primary-light)] text-white hover:bg-[var(--color-accent)] hover:text-[var(--color-dark)] transition-colors w-full md:w-auto px-10 py-5 rounded-lg text-lg"
-                onClick={() => setIsModalOpen(true)}
+                onClick={handleRequestAccess}
               />
               <p className="text-sm text-white/80 mt-2">
                 See a walkthrough + tell us what your close looks like.
@@ -65,15 +61,6 @@ const Header = () => {
           </svg>
         </div>
       </header>
-
-      {/* Modal with Early Access Form */}
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title="Request Early Access"
-      >
-        <EarlyAccessForm onSubmit={handleFormSubmit} />
-      </Modal>
     </>
   );
 };
