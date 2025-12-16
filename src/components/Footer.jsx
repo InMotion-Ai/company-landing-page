@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { navbarLinks } from '../data';
 import { FaLinkedinIn } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
     <footer className="mx-auto container px-0 lg:px-8 pt-12 text-white">
-      <div className="bg-[var(--color-primary)] rounded-0 lg:rounded-t-3xl px-6 lg:px-12 py-10 lg:py-12">
-        {/* Top Row - Logo, Links, Social */}
-        <div className="flex flex-col lg:flex-row gap-8 justify-between items-center mb-8">
+      <div className="bg-[var(--color-primary)] rounded-0 lg:rounded-t-3xl px-6 lg:px-12 py-4 lg:py-6">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 justify-between items-center text-sm">
           {/* Logo */}
           <div className="logo text-2xl font-bold">
             <Link to="/">
@@ -17,19 +15,12 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Navigation Links */}
-          <div className="links flex flex-col lg:flex-row text-center gap-4 lg:gap-8">
-            {navbarLinks.map((link) => {
-              return (
-                <a
-                  key={link.id}
-                  href={link.href}
-                  className="hover:text-[var(--color-accent)] transition-colors"
-                >
-                  {link.text}
-                </a>
-              );
-            })}
+          {/* Copyright & Privacy */}
+          <div className="flex flex-col lg:flex-row gap-3 lg:gap-6 text-center items-center">
+            <p>© {new Date().getFullYear()} NextOpsAI. All Rights Reserved.</p>
+            <Link to="/privacy-policy" className="hover:text-[var(--color-accent)] transition-colors">
+              Privacy Policy
+            </Link>
           </div>
 
           {/* Social Icons */}
@@ -42,17 +33,6 @@ const Footer = () => {
               <FaLinkedinIn className="text-[var(--color-primary)]" />
             </a>
           </div>
-        </div>
-
-        {/* Divider */}
-        <hr className="my-8 border-gray-700" />
-
-        {/* Bottom Row - Copyright & Privacy */}
-        <div className="flex flex-col lg:flex-row gap-3 lg:gap-8 text-center justify-center text-sm">
-          <p>© {new Date().getFullYear()} NextOpsAI. All Rights Reserved.</p>
-          <Link to="/privacy-policy" className="hover:text-[var(--color-accent)] transition-colors">
-            Privacy Policy
-          </Link>
         </div>
       </div>
     </footer>
