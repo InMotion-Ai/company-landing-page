@@ -1,6 +1,9 @@
-const WorkingProcessCard = ({ id, title, text }) => {
+const WorkingProcessCard = ({ id, title, text, bgColor = 'var(--color-gray-light)' }) => {
   return (
-    <div className="rounded-3xl p-8 shadow-[0_4px_0_0_var(--color-dark)] border border-[var(--color-dark)] bg-[var(--color-gray-light)]">
+    <div
+      className="rounded-3xl p-8 shadow-[0_4px_0_0_var(--color-dark)] border border-[var(--color-dark)]"
+      style={{ backgroundColor: bgColor }}
+    >
       {/* Header Row */}
       <div className="flex items-start gap-4 mb-4">
         <p className="text-3xl font-bold text-[var(--color-dark)] flex-shrink-0">{id}</p>

@@ -3,6 +3,15 @@ import { FaArrowDown } from 'react-icons/fa';
 import WorkingProcessCard from './ui/WorkingProcessCard';
 import { howItWorksSteps, images } from '../data';
 
+// Map step IDs to colors - alternating pattern
+const stepColors = {
+  '01': 'var(--color-gray-light)',
+  '02': 'var(--color-accent)',
+  '03': 'var(--color-gray-light)',
+  '04': 'var(--color-accent)',
+  '05': 'var(--color-gray-light)',
+};
+
 const WorkingProcess = () => {
   return (
     <section className="bg-[var(--color-primary)] py-16" id="how-it-works">
@@ -26,6 +35,7 @@ const WorkingProcess = () => {
                 text={step.description}
                 title={step.title}
                 id={step.id}
+                bgColor={stepColors[step.id]}
               />
               {/* Connector Arrow - show between all steps except after the last one */}
               {index < howItWorksSteps.length - 1 && (

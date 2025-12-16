@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { navbarLinks } from '../data';
 import { FaLinkedinIn } from 'react-icons/fa6';
-import { FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -41,13 +40,6 @@ const Footer = () => {
               aria-label="LinkedIn"
             >
               <FaLinkedinIn className="text-[var(--color-primary)]" />
-            </a>
-            <a
-              href="#"
-              className="cursor-pointer rounded-full bg-[var(--color-gray-light)] p-2 hover:bg-[var(--color-accent)] transition-colors"
-              aria-label="Twitter"
-            >
-              <FaTwitter className="text-[var(--color-primary)]" />
             </a>
           </div>
         </div>
