@@ -9,7 +9,10 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 justify-between items-center text-sm">
           {/* Copyright & Privacy */}
           <div className="flex flex-col lg:flex-row gap-3 lg:gap-6 text-center items-center">
-            <p>© {new Date().getFullYear()} NextOpsAI. All Rights Reserved.</p>
+            <p>© {new Date().getFullYear()} NexOpsAI. All Rights Reserved.</p>
+            <Link to="/about-us" className="hover:text-[var(--color-accent)] transition-colors">
+              About Us
+            </Link>
             <Link to="/privacy-policy" className="hover:text-[var(--color-accent)] transition-colors">
               Privacy Policy
             </Link>

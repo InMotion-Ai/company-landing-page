@@ -9,6 +9,7 @@ import FeaturesIncluded from './components/FeaturesIncluded';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import AboutUs from './components/AboutUs';
 
 const HomePage = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
