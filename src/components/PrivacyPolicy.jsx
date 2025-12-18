@@ -29,10 +29,11 @@ const PrivacyPolicy = () => {
               1. Introduction
             </h2>
             <p>
-              Welcome to Month-end AI Copilot ("we," "our," or "us"). We are committed to
-              protecting your privacy and handling your data in an open and transparent manner.
-              This Privacy Policy explains how we collect, use, store, and share information
-              when you use our AI-powered month-end accounting platform.
+              Welcome to OpexAi, a product of NexOps (operating as 17521740 Canada Ltd.)
+              ("we," "our," or "us"). We are committed to protecting your privacy and
+              handling your data in an open and transparent manner. This Privacy Policy
+              explains how we collect, use, store, and share information when you use our
+              AI-powered month-end accounting platform.
             </p>
           </section>
 
@@ -130,18 +131,27 @@ const PrivacyPolicy = () => {
           {/* Data Security */}
           <section>
             <h2 className="text-2xl font-bold mb-4 text-[var(--color-dark)]">
-              6. Data Security
+              6. Data Security and Storage
             </h2>
             <p className="mb-3">
               We implement industry-standard security measures to protect your data:
             </p>
-            <ul className="list-disc pl-6 space-y-2">
+            <ul className="list-disc pl-6 space-y-2 mb-4">
               <li>End-to-end encryption for data in transit and at rest</li>
               <li>Regular security audits and penetration testing</li>
               <li>Role-based access controls</li>
               <li>Secure cloud infrastructure with redundancy and backup</li>
               <li>Employee training on data protection practices</li>
             </ul>
+
+            <h3 className="text-xl font-semibold mb-3 text-[var(--color-dark)]">
+              Canadian Data Residency
+            </h3>
+            <p>
+              All financial data is stored and processed within Canadian data centers. Your
+              data remains within Canadian borders and is subject to Canadian privacy laws,
+              providing you with strong data protection and sovereignty guarantees.
+            </p>
           </section>
 
           {/* Data Retention */}
@@ -173,10 +183,10 @@ const PrivacyPolicy = () => {
             <p className="mt-4">
               To exercise these rights, please contact us at{' '}
               <a
-                href="mailto:privacy@monthendcopilot.com"
+                href="mailto:privacy@nexops.ca"
                 className="text-[var(--color-primary-light)] hover:underline"
               >
-                privacy@monthendcopilot.com
+                privacy@nexops.ca
               </a>
             </p>
           </section>
@@ -199,9 +209,11 @@ const PrivacyPolicy = () => {
               10. International Data Transfers
             </h2>
             <p>
-              Your information may be transferred to and processed in countries other than your
-              own. We ensure appropriate safeguards are in place to protect your data in
-              accordance with this Privacy Policy.
+              Your financial data is stored and processed exclusively within Canadian data
+              centers and does not leave Canada. In the event that any non-financial data
+              needs to be transferred internationally for operational purposes, we ensure
+              appropriate safeguards are in place to protect your data in accordance with
+              this Privacy Policy and applicable Canadian privacy laws.
             </p>
           </section>
 
@@ -238,28 +250,45 @@ const PrivacyPolicy = () => {
               contact us:
             </p>
             <div className="bg-[var(--color-gray-light)] p-6 rounded-lg mt-4">
-              <p className="mb-2">
+              <p>
                 <strong>Email:</strong>{' '}
                 <a
-                  href="mailto:privacy@monthendcopilot.com"
+                  href="mailto:privacy@nexops.ca"
                   className="text-[var(--color-primary-light)] hover:underline"
                 >
-                  privacy@monthendcopilot.com
+                  privacy@nexops.ca
                 </a>
-              </p>
-              <p>
-                <strong>Mailing Address:</strong> [Your Company Address]
               </p>
             </div>
           </section>
 
           {/* Compliance */}
           <section className="border-t pt-8 mt-8">
-            <p className="text-sm text-gray-600">
+            <h2 className="text-2xl font-bold mb-4 text-[var(--color-dark)]">
+              14. Regulatory Compliance
+            </h2>
+            <p className="text-sm text-gray-600 mb-4">
               This Privacy Policy is designed to comply with applicable data protection laws
-              including GDPR (EU), CCPA (California), and other regional privacy regulations.
+              including:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-sm text-gray-600 mb-4">
+              <li>
+                <strong>PIPEDA</strong> (Personal Information Protection and Electronic Documents
+                Act) - Canada's federal privacy law governing how private sector organizations
+                collect, use, and disclose personal information
+              </li>
+              <li>
+                <strong>GDPR</strong> (General Data Protection Regulation) - European Union
+              </li>
+              <li>
+                <strong>CCPA</strong> (California Consumer Privacy Act) - California, USA
+              </li>
+            </ul>
+            <p className="text-sm text-gray-600">
               We are committed to maintaining the highest standards of data protection and
-              privacy.
+              privacy. As a Canadian company serving Canadian businesses, we prioritize
+              compliance with Canadian privacy regulations while maintaining global best
+              practices.
             </p>
           </section>
         </div>
