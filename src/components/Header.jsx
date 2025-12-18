@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
       <header className="bg-[var(--color-primary)] relative overflow-hidden">
-        <div className="container px-6 mx-auto py-20 lg:py-28 flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10">
+        <div className="container px-6 mx-auto pt-8 pb-20 lg:pt-12 lg:pb-28 flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10">
           {/* Left Section - Content */}
           <div className="lg:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">

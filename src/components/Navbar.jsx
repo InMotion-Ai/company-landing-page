@@ -18,20 +18,23 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="relative bg-[var(--color-primary)]">
+      <div className="relative bg-white shadow-sm">
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center gap-5 w-full">
-          {/* Logo - Text-based placeholder */}
+          {/* Logo */}
           <div className="logo">
-            <Link to="/" className="text-2xl font-bold">
-              <span className="text-white">NextOps</span>
-              <span className="bg-[var(--color-accent)] px-1 rounded text-[var(--color-dark)]">AI</span>
+            <Link to="/">
+              <img
+                src="/opexai-logo-navbar-large.png"
+                alt="OpexAI Logo"
+                className="h-20 w-auto"
+              />
             </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-xl cursor-pointer text-white"
+            className="md:hidden p-2 text-xl cursor-pointer text-[var(--color-dark)]"
           >
             {isMenuOpen ? <HiX /> : <FaBars />}
           </button>
@@ -44,7 +47,7 @@ const Navbar = () => {
                   <li key={navLink.id} className="whitespace-nowrap">
                     <a
                       href={navLink.href}
-                      className="text-white hover:text-[var(--color-accent)] transition-colors"
+                      className="text-[var(--color-dark)] hover:text-[var(--color-primary-light)] transition-colors"
                     >
                       {navLink.text}
                     </a>
@@ -55,7 +58,7 @@ const Navbar = () => {
               {/* CTA Button */}
               <Button
                 text="Request early access"
-                className="bg-[var(--color-primary-light)] text-white hover:bg-[var(--color-accent)] hover:text-[var(--color-dark)] transition-colors px-6 py-3 rounded-lg"
+                className="bg-[var(--color-primary-light)] text-white hover:bg-[var(--color-primary)] transition-colors px-6 py-3 rounded-lg"
                 onClick={handleCTAClick}
               />
             </ul>
@@ -63,7 +66,7 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="absolute top-[100%] left-0 w-full bg-[var(--color-primary)] border-t border-[var(--color-primary-light)] py-4 md:hidden z-50">
+            <div className="absolute top-[100%] left-0 w-full bg-white border-t border-gray-200 py-4 md:hidden z-50 shadow-lg">
               <ul className="px-8 space-y-4">
                 {navbarLinks.map((navLink) => {
                   return (
@@ -71,7 +74,7 @@ const Navbar = () => {
                       <a
                         href={navLink.href}
                         onClick={() => setIsMenuOpen(false)}
-                        className="text-white hover:text-[var(--color-accent)] transition-colors"
+                        className="text-[var(--color-dark)] hover:text-[var(--color-primary-light)] transition-colors"
                       >
                         {navLink.text}
                       </a>
@@ -80,7 +83,7 @@ const Navbar = () => {
                 })}
                 <Button
                   text="Request early access"
-                  className="bg-[var(--color-primary-light)] text-white hover:bg-[var(--color-accent)] hover:text-[var(--color-dark)] transition-colors w-full px-6 py-3 rounded-lg"
+                  className="bg-[var(--color-primary-light)] text-white hover:bg-[var(--color-primary)] transition-colors w-full px-6 py-3 rounded-lg"
                   onClick={handleCTAClick}
                 />
               </ul>
