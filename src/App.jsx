@@ -10,6 +10,7 @@ import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import AboutUs from './components/AboutUs';
+import ScrollToTop from './components/ScrollToTop';
 
 const HomePage = () => {
   return (
@@ -27,6 +28,7 @@ const HomePage = () => {
 const App = () => {
   return (
     <main>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Button from './ui/Button';
 import { navbarLinks } from '../data';
 import { FaBars } from 'react-icons/fa';
@@ -7,13 +7,58 @@ import { HiX } from 'react-icons/hi';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+
+    // Check if it's an anchor link (starts with #)
+    if (href.startsWith('#')) {
+      const sectionId = href.substring(1);
+
+      // If not on home page, navigate to home first
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        // Already on home page, just scroll
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    } else {
+      // It's a regular route link
+      navigate(href);
+    }
+  };
 
   const handleCTAClick = () => {
-    const accessSection = document.getElementById('get-access');
-    if (accessSection) {
-      accessSection.scrollIntoView({ behavior: 'smooth' });
-    }
     setIsMenuOpen(false);
+
+    // If not on home page, navigate to home first
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const accessSection = document.getElementById('get-access');
+        if (accessSection) {
+          accessSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const accessSection = document.getElementById('get-access');
+      if (accessSection) {
+        accessSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (
@@ -47,7 +92,8 @@ const Navbar = () => {
                   <li key={navLink.id} className="whitespace-nowrap">
                     <a
                       href={navLink.href}
-                      className="text-[var(--color-dark)] hover:text-[var(--color-primary-light)] transition-colors"
+                      onClick={(e) => handleNavClick(e, navLink.href)}
+                      className="text-[var(--color-dark)] hover:text-[var(--color-primary-light)] transition-colors cursor-pointer"
                     >
                       {navLink.text}
                     </a>
@@ -73,8 +119,8 @@ const Navbar = () => {
                     <li key={navLink.id} className="whitespace-nowrap">
                       <a
                         href={navLink.href}
-                        onClick={() => setIsMenuOpen(false)}
-                        className="text-[var(--color-dark)] hover:text-[var(--color-primary-light)] transition-colors"
+                        onClick={(e) => handleNavClick(e, navLink.href)}
+                        className="text-[var(--color-dark)] hover:text-[var(--color-primary-light)] transition-colors cursor-pointer"
                       >
                         {navLink.text}
                       </a>
