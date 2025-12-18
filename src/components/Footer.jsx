@@ -21,7 +21,9 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="icons flex gap-4">
             <a
-              href="#"
+              href="https://www.linkedin.com/company/nexopsai/?viewAsMember=true"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cursor-pointer rounded-full bg-[var(--color-gray-light)] p-2 hover:bg-[var(--color-accent)] transition-colors"
               aria-label="LinkedIn"
             >
