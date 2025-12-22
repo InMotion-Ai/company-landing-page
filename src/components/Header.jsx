@@ -17,17 +17,16 @@ const Header = () => {
           {/* Left Section - Content */}
           <div className="lg:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
-              Your month-end AI copilot, built for real-world close chaos
+              Your AI copilot for financial administration.
             </h1>
             <p className="text-lg md:text-xl leading-relaxed text-white">
-              A single platform where AI helps you track what's done, what's
-              missing, and what needs review across invoices, payroll, and
-              expenses—so month-end becomes a guided routine instead of a
-              scramble.
+              A single platform where AI manages everyday admin work, 
+              tracking what’s done, what’s missing, and what needs review across invoices, 
+              payroll, and expenses so nothing slips through the cracks when it matters most.
             </p>
             <div className="space-y-2">
               <Button
-                text="Request early access"
+                text="Join the waitlist"
                 className="bg-[var(--color-primary-light)] text-white hover:bg-[var(--color-accent)] hover:text-[var(--color-dark)] transition-colors w-full md:w-auto px-10 py-5 rounded-lg text-lg"
                 onClick={handleRequestAccess}
               />

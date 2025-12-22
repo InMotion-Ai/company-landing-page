@@ -103,7 +103,7 @@ const Navbar = () => {
 
               {/* CTA Button */}
               <Button
-                text="Request early access"
+                text="Join the waitlist"
                 className="bg-[var(--color-primary-light)] text-white hover:bg-[var(--color-primary)] transition-colors px-6 py-3 rounded-lg"
                 onClick={handleCTAClick}
               />
@@ -128,7 +128,7 @@ const Navbar = () => {
                   );
                 })}
                 <Button
-                  text="Request early access"
+                  text="Join the waitlist"
                   className="bg-[var(--color-primary-light)] text-white hover:bg-[var(--color-primary)] transition-colors w-full px-6 py-3 rounded-lg"
                   onClick={handleCTAClick}
                 />

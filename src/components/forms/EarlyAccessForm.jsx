@@ -40,7 +40,7 @@ const EarlyAccessForm = ({ onSubmit, className = '', showHeading = false }) => {
   return (
     <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
       {showHeading && (
-        <h3 className="text-2xl font-medium mb-6">Request Early Access</h3>
+        <h3 className="text-2xl font-medium mb-6">Join the Waitlist</h3>
       )}
 
       {/* Full Name */}
@@ -166,7 +166,7 @@ const EarlyAccessForm = ({ onSubmit, className = '', showHeading = false }) => {
 
       {/* Submit Button */}
       <Button
-        text="Request Early Access"
+        text="Join the Waitlist"
         className="bg-[var(--color-dark)] text-white w-full hover:bg-[var(--color-primary)] transition-colors"
       />
     </form>

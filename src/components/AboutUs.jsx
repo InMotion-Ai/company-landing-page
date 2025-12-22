@@ -263,7 +263,7 @@ const AboutUs = () => {
               with OpexAi's Month-end AI Copilot.
             </p>
             <Button
-              text="Request early access"
+              text="Join the waitlist"
               className="bg-[var(--color-primary-light)] text-white hover:bg-[var(--color-accent)] hover:text-[var(--color-dark)] transition-colors px-10 py-5 rounded-lg text-lg"
               onClick={handleRequestAccess}
             />
